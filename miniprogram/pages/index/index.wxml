@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+
+<view class="widget-row">
+  <!-- 按朝代查看诗词 -->
+  <view class="widget">
+    <navigator url="../dynasty/dynasty" open-type="navigate" class="widget-text">
+    <image class="widget-image" src="../../images/mini-dynasty.png" mode="aspectFit" />
+    <text class="widget-text">朝代</text>
+    </navigator>
+  </view>
+
+  <!-- 按作者查看诗词 -->
+  <view class="widget">
+    <navigator url="../authors/authors" open-type="navigate" class="widget-text">
+    <image class="widget-image" src="../../images/mini-author.png" mode="aspectFit" />
+    <text class="widget-text">诗人</text>
+    </navigator>
+  </view>
+</view>
+
+<view class="widget-row">
+  <!-- 按诗集查看诗词 -->
+  <view class="widget">
+    <navigator url="../poemCollection/poemCollection" open-type="navigate" class="widget-text">
+    <image class="widget-image" src="../../images/mini-poem-collection.png" mode="aspectFit" />
+    <text class="widget-text">诗集</text>
+    </navigator>
+  </view>
+
+  <!-- 按名字查看诗词 -->
+  <view class="widget">
+    <navigator url="../poem/poem" open-type="navigate" class="widget-text">
+    <image class="widget-image" src="../../images/mini-poem.png" mode="aspectFit" />
+    <text class="widget-text">诗词</text>
+    </navigator>
+  </view>
+</view>
+
+</view>

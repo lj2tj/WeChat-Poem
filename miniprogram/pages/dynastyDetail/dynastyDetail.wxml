@@ -1,0 +1,31 @@
+<!--miniprogram/pages/dynastyDetail/dynastyDetail.wxml-->
+<view class="item">
+  <view class="weui-media-box__title">
+    <view class="weui-media-box__title__dynasty">{{dynasty.name}}</view> 
+    <view class="weui-media-box__title__duration">{{dynasty.start_year}} ~ {{dynasty.end_year}}</view>
+  </view>
+
+  <view class="dynasty-desc {{isFolded?'hide':'show'}}">
+    <rich-text nodes="{{dynasty.description}}"></rich-text>
+  </view>
+  <view bindtap="change" class="state">{{isFolded?'展开':'收起'}}</view> 
+</view>
+
+
+<view class="widget-row">
+  <!-- 按作者查看诗词 -->
+  <view class="widget">
+    <navigator url="../authors/authors?dynasty={{dynasty.name}}" open-type="navigate" class="widget-text">
+      <image class="widget-image" src="../../images/mini-author.png" mode="aspectFit" />
+      <text class="widget-text">诗人</text>
+    </navigator>
+  </view>
+
+  <!-- 按名字查看诗词 -->
+  <view class="widget">
+    <navigator url="../poem/poem?dynasty={{dynasty.name}}" open-type="navigate" class="widget-text">
+      <image class="widget-image" src="../../images/mini-poem.png" mode="aspectFit" />
+      <text class="widget-text">诗词</text>
+    </navigator>
+  </view>
+</view>

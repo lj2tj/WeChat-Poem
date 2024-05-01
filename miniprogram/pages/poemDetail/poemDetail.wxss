@@ -1,0 +1,34 @@
+/* pages/poemDetail/poemDetail.wxss */
+.poem{
+  width:100%;
+  min-height: 100%;
+  background-color: #E1E0C7;
+  position: absolute;
+}
+.poem-header{
+  text-align: center;
+  border-bottom: solid thin bisque;
+  margin-bottom: 5rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+.poem-title{
+  font-weight: bolder;
+}
+.author{
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+.author::before{
+  content: "("
+}
+.author::after{
+  content: ")"
+}
+
+
+.poem-body{
+  font-size: 32rpx;
+  line-height: 45rpx;
+  margin: 20rpx;
+}

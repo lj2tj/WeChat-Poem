@@ -1,0 +1,71 @@
+/* authorDetail.wxss */
+.weui-media-box__hd_in-appmsg{margin-right:16px;width:60px;height:60px;line-height:60px;text-align:center}
+.weui-media-box__bd_in-appmsg{-webkit-box-flex:1;-webkit-flex:1;flex:1;min-width:0}
+
+.weui-media-box__title{
+  color:rgba(0,0,0,.9);
+  width:auto;
+  white-space:nowrap;
+  align-items: center;
+  text-align: center;
+  line-height: 2em;
+}
+.weui-media-box__title__dynasty{
+  font-weight: bolder;
+  display: inline-block;
+  font-size: 1.5em;
+}
+.weui-media-box__title__duration{
+  font-size:  0.5em;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* description */
+.dynasty-desc{
+  font-size: 32rpx;
+  line-height:50rpx;
+  padding: 10rpx;
+  background-color: rgb(185, 184, 184);
+  /*关键属性（必须有的）  */
+  display: -webkit-box; 
+  /*规定子元素的排列方向 */
+  -webkit-box-orient: vertical; 
+   /*限制文本显示的行数  */
+  -webkit-line-clamp:2;
+  /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.hide{
+ display: -webkit-box;
+}
+.show{
+ display: block;
+}
+
+/*切换  */  
+ .state{
+  color: cornflowerblue;
+  float: right;
+  font-size: 30rpx;
+  margin: 30rpx;
+ }
+
+
+ /* 诗词列表 */
+ .poemList {
+  align-items: left;
+  line-height: 50rpx;
+  font-size: 40rpx;
+  display: block;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.poemList navigator > view{
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-bottom: solid thin bisque;
+}

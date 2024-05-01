@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+
+<view wx:for="{{dynastyList}}" wx:key="{{item.start_year}}" class="item">
+    <navigator url="../dynastyDetail/dynastyDetail?name={{item.name}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="./mini_dynasty.png" mode="aspectFit" />
+        </view>
+        <view class="weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title"><view class="weui-media-box__title__dynasty">{{item.name}}</view> <view class="weui-media-box__title__duration">{{item.start_year}} ~ {{item.end_year}}</view></view>
+            <view class="weui-media-box__desc">{{item.description}}</view>
+        </view>
+    </navigator>
+
+</view>
+</view>

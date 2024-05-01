@@ -1,0 +1,31 @@
+<!--pages/authors/authors.wxml-->
+<mp-loading type="circle"></mp-loading>
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+    <!-- 搜索框 -->
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" bindinput="inputName" placeholder="请输入诗人姓名"/>
+        </view>
+    </view>
+    <!-- 搜索按钮,调用搜索查询方法 -->
+    <view class="weui-search-bar__cancel-btn" bindtap='searchAuthor'>搜索</view>
+</view>
+<block wx:if="{{authors.length > 0}}">
+  <view wx:for="{{authors}}" wx:key="{{item.start_year}}" class="item">
+      <navigator url="../authorDetail/authorDetail?name={{item.name}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="../../images/mini-author.png" mode="aspectFit" />
+          </view>
+          <view class="weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title"><view class="weui-media-box__title__dynasty">{{item.name}}</view> <view class="weui-media-box__title__duration">{{item.start_year}} ~ {{item.end_year}}</view></view>
+              <view class="weui-media-box__desc">{{item.description}}</view>
+          </view>
+      </navigator>
+  </view>
+</block>
+<block wx:else>
+  <view class="empty">
+    <text>暂未收录任何诗人信息</text>
+  </view>
+</block>

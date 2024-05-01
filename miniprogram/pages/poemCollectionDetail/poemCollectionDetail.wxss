@@ -1,0 +1,22 @@
+/* pages/poemDetail/poemDetail.wxss */
+.poemCollection{
+  width:100%;
+  min-height: 100%;
+  background-color: #E1E0C7;
+  position: absolute;
+}
+.header{
+  text-align: center;
+  border-bottom: solid thin bisque;
+  margin-bottom: 5rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+.title{
+  font-weight: bolder;
+}
+.body{
+  font-size: 32rpx;
+  line-height: 50rpx;
+  margin: 20rpx;
+}

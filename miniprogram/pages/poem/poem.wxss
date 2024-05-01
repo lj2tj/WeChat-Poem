@@ -1,0 +1,41 @@
+/* pages/poem/poem.wxss */
+.container {
+  display: flex;
+  margin-left: 20rpx;
+  width: 100%;
+}
+
+.container navigator{
+  line-height: 50rpx;
+  font-size: 36rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-bottom: solid thin bisque;
+  width: 100%;
+  display: flex;
+}
+
+.container navigator > .left{
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.container navigator > .right{
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.empty{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: x-large;
+}

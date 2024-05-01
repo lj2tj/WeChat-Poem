@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="poemCollection">
+    <view class="header">
+        <text class="title">{{poemCollection.title}}</text>
+    </view>
+    <view class="body">
+      <rich-text nodes="{{poemCollection.content}}"></rich-text>
+    </view>
+  </view>
+</view>

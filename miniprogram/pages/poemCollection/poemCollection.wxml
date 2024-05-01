@@ -1,0 +1,7 @@
+<view class="container">
+  <block wx:for="{{collectionList}}" wx:key="{{item.title}}">
+    <navigator url="../poemCollectionDetail/poemCollectionDetail?title={{item.title}}">
+      <view class="left">{{item.title}}</view>
+    </navigator>
+  </block>
+</view>

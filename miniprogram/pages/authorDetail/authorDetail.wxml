@@ -1,0 +1,18 @@
+<!--pages/authorDetail/authorDetail.wxml-->
+<view class="item">
+  <view class="weui-media-box__title">
+    <view class="weui-media-box__title__dynasty">{{author.name}}</view> 
+    <view class="weui-media-box__title__duration">{{author.start_year}} ~ {{author.end_year}}</view>
+  </view>
+
+  <view class="dynasty-desc {{isFolded?'hide':'show'}}">
+    <rich-text nodes="{{author.description}}"></rich-text>
+  </view>
+  <view bindtap="change" class="state">{{isFolded?'展开':'收起'}}</view> 
+</view>
+
+<view class="poemList">
+  <block wx:for="{{poemList}}" wx:key="{{item.title}}">
+    <navigator url="../poemDetail/poemDetail?id={{item._id}}"><view>{{item.title}}</view></navigator>
+  </block>
+</view>

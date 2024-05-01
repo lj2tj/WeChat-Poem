@@ -1,0 +1,24 @@
+/* pages/poemCollection/poemCollection.wxss */
+/* pages/poem/poem.wxss */
+.container {
+  display: flex;
+  margin-left: 20rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.container navigator{
+  line-height: 45rpx;
+  font-size: 32rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-bottom: solid thin bisque;
+  width: 100%;
+  display: flex;
+}
+
+.container navigator > .left{
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+}

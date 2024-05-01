@@ -1,0 +1,26 @@
+<!--pages/poem/poem.wxml-->
+<view class="container">
+  <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+      <!-- 搜索框 -->
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" bindinput="inputTitle" placeholder="请输入诗词标题/诗人姓名"/>
+          </view>
+      </view>
+      <!-- 搜索按钮,调用搜索查询方法 -->
+      <view class="weui-search-bar__cancel-btn" bindtap='searchPoem'>搜索</view>
+  </view>
+  <block wx:if="{{poemList.length > 0}}">
+    <block wx:for="{{poemList}}" wx:key="{{item.title}}">
+      <navigator url="../poemDetail/poemDetail?id={{item._id}}">
+        <view class="left">{{item.title}}</view><view class="right">{{item.author}}</view>
+      </navigator>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="empty">
+      <text>暂时未收录任何诗词信息</text>
+    </view>
+  </block>
+</view>
